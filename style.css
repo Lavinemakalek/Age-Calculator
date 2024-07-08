@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: rgb(224, 217, 217);
+    display: flex;
+    justify-content: center;
+    padding: 500px;
+   
+
+}
+
+.main{
+    /* border: 2px solid black; */
+    height: 600px;
+    width: 790px;
+     background-color: white;
+    border-bottom-right-radius:200px ;
+    padding: 50px;
+} 
+
+.class1{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 30px;
+}
+#day,#month,#year{
+    height: 45px;
+    width: 150px;
+    row-gap: 100px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.class{
+    display: flex;
+    flex-direction: column;
+    padding-top:50px ;
+    font-size: 70px;
+    font-weight: bolder;
+   
+}
+
+.line1{
+    color: rgb(103, 13, 177);
+    width: 30px;
+    
+   
+}
