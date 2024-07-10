@@ -26,24 +26,24 @@ it returns the error message "Please enter valid numbers".*/
     if (isNaN(day) || isNaN(month) || isNaN(year)) {
         return 'Please enter valid numbers';
     }
-
+// Converts the day ,month and year values to an integer and stores them in dayInt,monthInt and yearInt respectively.
     const dayInt = parseInt(day, 10);
     const monthInt = parseInt(month, 10);
     const yearInt = parseInt(year, 10);
-
+// Checks if the day is within the valid range (1-31). If not, it returns the error message "Please enter a valid day".
     if (dayInt < 1 || dayInt > 31) {
         return 'Please enter a valid day';
     }
-
+    // Checks if the month is within the valid range (1-12). If not, it returns the error message "Please enter a valid month".
     if (monthInt < 1 || monthInt > 12) {
         return 'Please enter a valid month';
     }
-
+// checks if the entered year is greater than the current year,returns'please enter a valid year'
     const currentYear = new Date().getFullYear();
-    if (yearInt < 1900 || yearInt > currentYear) {
+    if ( yearInt > currentYear) {
         return 'Please enter a valid year';
     }
-
+// If all validations pass, it returns null, indicating no errors.
     return null;
 }
 
