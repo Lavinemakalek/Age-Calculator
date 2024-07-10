@@ -9,10 +9,6 @@ body{
     display: flex;
     justify-content: center;
     padding: 500px;
-    position: fixed;
-   
-   
-
 }
 
 .main{
