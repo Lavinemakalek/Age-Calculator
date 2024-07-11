@@ -47,25 +47,34 @@ it returns the error message "Please enter valid numbers".*/
     return null;
 }
 
+/*Defines a function calculateAge that takes a birthDate as a parameter.
+Gets the current date.
+Calculates the difference in years, months, and days between the current date and the birth date.*/
+
 function calculateAge(birthDate) {
     const today = new Date();
     let ageYears = today.getFullYear() - birthDate.getFullYear();
     let ageMonths = today.getMonth() - birthDate.getMonth();
     let ageDays = today.getDate() - birthDate.getDate();
 
+
+    // Adjusts the age calculation if the number of days is negative.
     if (ageDays < 0) {
         ageMonths--;
         ageDays += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
     }
 
+    // Adjusts the age calculation if the number of months is negative.
     if (ageMonths < 0) {
         ageYears--;
         ageMonths += 12;
     }
-
+    // Returns an object containing the calculated age in years, months, and days.
     return { years: ageYears, months: ageMonths, days: ageDays };
 }
-
+/*Defines a function displayAge that takes an age object as a parameter.
+Selects all elements with the class line1 inside elements with the class class.
+Updates the text content of the selected elements with the calculated age in years, months, and day*/ 
 function displayAge(age) {
     const ageElements = document.querySelectorAll('.class .line1');
     ageElements[0].textContent = age.years;
